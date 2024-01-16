@@ -1,0 +1,94 @@
+@import "scss/utils";
+
+.nav_links {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  @include maxWidth;
+  margin: 24px auto;
+  @include thousandTwoWidth {
+    justify-content: flex-start;
+  }
+
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 40px;
+  @include bigTablet {
+    column-gap: 20px;
+  }
+  @include phone {
+    column-gap: 10px;
+  }
+}
+
+.nav_actions {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  column-gap: 40px;
+  top: -10px;
+  right: 0;
+  @include bigTablet {
+    column-gap: 20px;
+  }
+  @include phone {
+    display: none;
+  }
+}
+
+.link {
+  @include RobotoRegular(15px);
+  color: $main-text-color;
+  cursor: pointer;
+  @include phone {
+    font-size: 14px;
+  }
+}
+
+.header_button {
+  padding: 10px 18px;
+  background-color: white;
+  border-radius: 40px;
+  outline: 2px solid transparent;
+  transition: .2s all ease-in-out;
+  cursor: pointer;
+  &:hover {
+    outline-color: white;
+    background-color: transparent;
+    color: white;
+  }
+}
+
+.link_with_childs {
+  @extend .link;
+  position: relative;
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+  cursor: pointer;
+  & svg {
+    transition: .2s rotate ease-in-out;
+    rotate: 0;
+  }
+}
+
+.link_open{
+  rotate: 180deg;
+}
+
+.link_childs {
+  min-width: inherit;
+  background-color: transparent;
+
+  & li {
+    @extend .link;
+    &:first-child {
+      margin-top: 0;
+    }
+    margin-top: 5px;
+  }
+}

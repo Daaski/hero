@@ -1,0 +1,101 @@
+@import "scss/utils";
+
+.main_content_wrapper {
+  @include maxWidth;
+  display: flex;
+  margin-top: 100px;
+  justify-content: space-between;
+  @include thousandTwoWidth {
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+    row-gap: 50px;
+  }
+  @include phoneOrTablet {
+    margin-top: 20px;
+  }
+}
+
+.description {
+  position: relative;
+  width: 47%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 28px;
+  margin-top: 120px;
+  z-index: 1;
+  @include thousandTwoWidth {
+    width: 85%;
+  }
+  @include phoneOrTablet {
+    margin-top: 50px;
+  }
+  @include phone {
+    width: 100%;
+  }
+  & h1 {
+    @include PoppinsRegular(76px);
+    color: $main-text-color;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.20);
+    letter-spacing: -1.52px;
+    line-height: 112.5%;
+    @include phoneOrTablet {
+      font-size: 54px;
+    }
+  }
+  & p {
+    @include Roboto300(20px);
+    letter-spacing: 0.4px;
+    color: $gray-text-color;
+  }
+  &:after {
+    width: 100%;
+    height: 630px;
+    position: absolute;
+    content: '';
+    border-radius: 630px;
+    opacity: 0.15;
+    background:  #96F;
+    filter: blur(150px);
+    z-index: -1;
+    top: -50%;
+  }
+}
+
+.email_input {
+  width: 75%;
+  @include thousandTwoWidth {
+    width: 60%;
+  }
+  @include phoneOrTablet {
+    width: 100%;
+  }
+}
+
+.image_wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 716px;
+  z-index: 1;
+  @include thousandTwoWidth {
+    width: 100%;
+  }
+  &:before {
+      content: '';
+      position: absolute;
+      width: 90%;
+      height: 90%;
+      inset: 0;
+      filter: drop-shadow(0px 20px 30px rgba(14, 10, 15, 0.80)) blur(50px);;
+      background:linear-gradient(to top right, transparentize(#4D66E5, .8) 55%, #4D66E5 50%, transparentize(#CB6AFB, .85) 40%);
+      border-radius: 30%;
+  }
+}
+
+.image_mock {
+  margin-top: 30px;
+  opacity: .15;
+
+}

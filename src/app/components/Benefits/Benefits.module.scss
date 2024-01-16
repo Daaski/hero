@@ -1,0 +1,81 @@
+@import "scss/utils";
+
+.benefits_wrapper {
+  @include maxWidth;
+  margin-top: 120px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 187px;
+  padding-right: 125px;
+  @include thousandTwoWidth {
+    padding: 0;
+  }
+  @include phoneOrTablet {
+    flex-flow: row wrap;
+    row-gap: 40px;
+  }
+  @include phoneOrTablet {
+    margin-bottom: 120px;
+  }
+  @include phone {
+    margin-bottom: 60px;
+  }
+}
+
+.benefit_item {
+  width: 338px;
+  display: flex;
+  flex-direction: column;
+  @include thousandTwoWidth {
+    width: 30%;
+  }
+  @include phoneOrTablet {
+    width: calc(50% - 30px);
+  }
+  @include phone {
+    width: 100%;
+  }
+}
+
+.benefit_amount {
+  width: max-content;
+  position: relative;
+  @include PoppinsRegular(136px);
+  font-weight: 275;
+  line-height: 100%;
+  letter-spacing: -5.44px;
+  background: linear-gradient(133deg, #D383FC 21.78%, #CB6AFB 39.25%, rgba(203, 106, 251, 0.20) 86.85%);
+  text-shadow: 0 0 200px transparentize(#D383FC, .2);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 14px;
+  @include thousandTwoWidth {
+    font-size: 110px;
+  }
+}
+
+.benefit_title {
+  @include RobotoRegular(24px);
+  letter-spacing: 0.48px;
+  color: $main-text-color;
+  @include thousandTwoWidth {
+    font-size: 22px;
+  }
+}
+
+.benefit_line {
+  height: 1px;
+  margin: 32px 0;
+  opacity: .1;
+}
+
+.description {
+  @include Roboto300(18px);
+  color: #F0EEF1;
+  line-height: 150%;
+  letter-spacing: 0.36px;
+  @include thousandTwoWidth {
+    font-size: 16px;
+  }
+}
