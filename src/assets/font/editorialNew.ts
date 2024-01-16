@@ -1,7 +1,7 @@
 import localFont from 'next/font/local'
 
 export const editorialNew = localFont({
-    src: './PPEditorialNew-Light.ttf',
+    src: './local/pp-editoria-new-5.woff',
     weight: '400',
     display: 'swap',
     style: 'normal',
