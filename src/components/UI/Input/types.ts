@@ -1,4 +1,4 @@
-import { ChangeEventHandler, FocusEvent, KeyboardEventHandler } from 'react';
+import { ChangeEventHandler, FocusEvent } from 'react';
 
 interface SubmitButtonData {
     text: string

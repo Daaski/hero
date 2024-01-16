@@ -39,6 +39,9 @@ export const SendEmailInput = () => {
         await new Promise((resolve) => setTimeout(resolve, 2000));
         if (isEmailValid(email)) {
             setStatus('success');
+            toast('Success subscribe!', {
+                type: 'success'
+            })
             setTimeout(() => setStatus('pending'), 3000);
         } else {
             setErrors({email: 'Incorrect email'})

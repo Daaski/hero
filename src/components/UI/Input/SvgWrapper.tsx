@@ -3,7 +3,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 import LoadingSvg from 'components/UI/Input/svg/CircleSvg.svg';
-import SuccessSvg from 'components/UI/Input/svg/SuccessSvg.svg';
 
 import scss from 'components/UI/Input/Input.module.scss';
 
